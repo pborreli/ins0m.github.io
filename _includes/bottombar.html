@@ -12,7 +12,9 @@
     {% endcomment %}
 
     {% for post in site.posts %}
-        <a class="bottombar-nav-item {% if page.url == post.url %} active{% endif %}" href="{{ post.url }}">{{ post.title }}</a>
+      <a class="bottombar-nav-item {% if page.url == post.url %} active{% endif %}" href="{{ post.url }}">{{ post.title }}
+
+      </a>
     {% endfor %}
 
   </nav>
