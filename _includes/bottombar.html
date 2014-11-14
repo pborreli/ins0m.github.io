@@ -1,0 +1,20 @@
+<!-- Target for toggling the bottombar `.bottombar-checkbox` is for regular
+     styles, `#bottombar-checkbox` for behavior. -->
+<input type="checkbox" class="bottombar-checkbox" id="bottombar-checkbox">
+
+<!-- Toggleable bottombar -->
+<div class="bottombar" id="bottombar">
+  <nav class="bottombar-nav">
+
+    {% comment %}
+      The code below dynamically generates a bottombar nav of pages with
+      `layout: page` in the front-matter. See readme for usage.
+    {% endcomment %}
+
+    {% for post in site.posts %}
+        <a class="bottombar-nav-item {% if page.url == post.url %} active{% endif %}" href="{{ post.url }}">{{ post.title }}</a>
+    {% endfor %}
+
+  </nav>
+
+</div>

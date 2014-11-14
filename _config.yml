@@ -1,12 +1,26 @@
-# Site settings
-title: Thoughts about my thoughts
-email: waldmann [at] in . tum . de
-description: > # this means to ignore newlines until "baseurl:"
-  Blog of PhD candidate alexander waldmann at TU munich
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://ins0m.github.io" # the base hostname & protocol for your site
-#twitter_username: jekyllrb
-github_username:  ins0m
+# Dependencies
+markdown:            redcarpet
+highlighter:         pygments
 
-# Build settings
-markdown: kramdown
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               Thoughts about thoughts
+tagline:             'Random epiphanies'
+description:         ''
+url:                 http://ins0m.github.io
+baseurl:             /
+paginate:            5
+
+# About/contact
+author:
+  name:              Alexander Waldmann
+  url:               https://wwwmatthes.in.tum.de/pages/n3pozdzwts1i/Alexander-Waldmann
+  email:             waldmann@in.tum.de
+
+# Custom vars
+version:             1.0.0

@@ -1,0 +1,195 @@
+/*
+ * bottombar
+ *
+ * The bottombar is the drawer, the item we are toggling with our handy hamburger
+ * button in the corner of the page.
+ *
+ * This particular bottombar implementation was inspired by Chris Coyier's
+ * "Offcanvas Menu with CSS Target" article, and the checkbox variation from the
+ * comments by a reader. It modifies both implementations to continue using the
+ * checkbox (no change in URL means no polluted browser history), but this uses
+ * `position` for the menu to avoid some potential content reflow issues.
+ *
+ * Source: http://css-tricks.com/off-canvas-menu-with-css-target/#comment-207504
+ */
+
+/* Style and "hide" the bottombar */
+.bottombar {
+  position: fixed;
+  bottom: 0;
+  z-index: 20;
+  width: 100%;
+  height: 2rem;
+  overflow-y: auto;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: .875rem; /* 15px */
+  color: rgba(255,255,255,.6);
+  background-color: #202020;
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+}
+@media (min-width: 30em) {
+  .bottombar {
+    font-size: .75rem; /* 14px */
+  }
+}
+
+/* bottombar content */
+.bottombar a {
+  font-weight: normal;
+  color: #fff;
+}
+.bottombar-item {
+  padding: 1rem;
+}
+.bottombar-item p:last-child {
+  margin-bottom: 0;
+}
+
+/* bottombar nav */
+.bottombar-nav {
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.bottombar-nav-item {
+  /*display: block;*/
+  float:left;
+  padding: .5rem 1rem;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+.bottombar-nav-item.active,
+a.bottombar-nav-item:hover,
+a.bottombar-nav-item:focus {
+  text-decoration: none;
+  background-color: rgba(255,255,255,.1);
+  border-color: transparent;
+}
+
+@media (min-width: 48em) {
+  .bottombar-item {
+    padding: 1.5rem;
+  }
+  .bottombar-nav-item {
+    padding-left:  1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Hide the bottombar checkbox that we toggle with `.bottombar-toggle` */
+.bottombar-checkbox {
+  display: none;
+}
+
+/* Style the `label` that we use to target the `.bottombar-checkbox` */
+.bottombar-toggle {
+  position: absolute;
+  bottom:  3rem;
+  right: 1rem;
+  padding: .5rem .65rem;
+  color: #505050;
+  background-color: #ac4142;
+  border-radius: 4px;  background-repeat: none;
+}
+.bottombar-toggle:before {
+  display: block;
+  padding-bottom: .125rem;
+}
+
+.bottombar-toggle:active,
+#bottombar-checkbox:checked ~ .bottombar-toggle {
+  color: #fff;
+  background-color: #fff;
+}
+
+@media (min-width: 30.1em) {
+  .bottombar-toggle {
+    position: fixed;
+  }
+  .bottombar-toggle:before {
+    padding-bottom: .15rem;
+    border-top-width: .45rem;
+    border-bottom-width: .15rem;
+  }
+}
+
+
+/* Slide effect
+ *
+ * Handle the sliding effects of the bottombar and content in one spot, seperate
+ * from the default styles.
+ *
+ * As an a heads up, we don't use `transform: translate3d()` here because when
+ * mixed with `position: fixed;` for the bottombar toggle, it creates a new
+ * containing block. Put simply, the fixed bottombar toggle behaves like
+ * `position: absolute;` when transformed.
+ *
+ * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
+ */
+
+.wrap,
+.bottombar,
+.bottombar-toggle {
+  -webkit-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.wrap,
+.bottombar-toggle {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+          transition: transform .3s ease-in-out;
+}
+
+#bottombar-checkbox:checked + .bottombar {
+  z-index: 11;
+  visibility: visible;
+}
+#bottombar-checkbox:checked ~ .bottombar,
+#bottombar-checkbox:checked ~ .wrap,
+#bottombar-checkbox:checked ~ .bottombar-toggle {
+  -webkit-transform: translateY(2rem);
+      -ms-transform: translateY(2rem);
+          transform: translateY(2rem);
+}
+
+/*
+ * Overlay bottombar
+ *
+ * Make the bottombar content overlay the viewport content instead of pushing it
+ * aside when toggled.
+ */
+
+.bottombar-overlay #bottombar-checkbox:checked ~ .wrap {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+.bottombar-overlay #bottombar-checkbox:checked ~ .bottombar-toggle {
+  box-shadow: 0 0 0 .25rem #fff;
+}
+.bottombar-overlay #bottombar-checkbox:checked ~ .bottombar {
+  box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
+}
+
+/* Only one tweak for a reverse layout */
+.layout-reverse.bottombar-overlay #sidebar-checkbox:checked ~ .bottombar {
+  box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
+}
+
+/*
+ * Themes
+ *
+ * Apply custom color schemes by adding the appropriate class to the `body`.
+ * Based on colors from Base16: http://chriskempson.github.io/base16/#default.
+ */
+
+/* Red */
+.theme-base-08 .bottombar,
+.theme-base-08 .bottombar-toggle:active,
+.theme-base-08 #bottombar-checkbox:checked {
+  background-color: #ac4142;
+}
+.theme-base-08 .container a,
+.theme-base-08 .bottombar-toggle,
+.theme-base-08 .related-posts li a:hover {
+  color: #ac4142;
+}
+
