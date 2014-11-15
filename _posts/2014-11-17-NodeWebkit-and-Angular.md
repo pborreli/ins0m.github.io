@@ -121,8 +121,9 @@ in your JS files.
 
 ## Links
 * [bracket.io](http://www.bracket.io)
-* [a template using node.js, code mirror, markdown (node.js and browser version) and local file access](https://bitbucket.org/ins0m/nw-template.git
+* [A template using node.js, codeMirror, markdown (node.js and browser version) and local file access](https://bitbucket.org/ins0m/nw-template.git
 )
+* [NodeWebkit](https://github.com/rogerwang/node-webkit)
 
 ## Notes
 * Yes, this does allow you to access files of the local hard drive in JavaScript. Yes, it allows you to instantly work with the fs, native dialogs, the window object, processes etc. It gives you node.js
