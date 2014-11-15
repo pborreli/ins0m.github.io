@@ -40,7 +40,7 @@ title: Curriculum vitae
 <img src="/public/moid.png" style="float:right;padding:10px;height: 4rem"></img>
 >Developer for mobile applications at MoID GmbH (08/01/11 - 01/01/12), Design and release of the mobile application „MoID“; **Architect and project lead**
 
-<img src="/public/ls1.png" style="float:right;padding:10px;height: 3rem"></img>
+<img src="/public/LS1.png" style="float:right;padding:10px;height: 3rem"></img>
 >Research Assistant at the Chair for Applied Software Engineering (Prof. Bernd Brügge, Ph.D.) ,TU Munich (12/01/10 - 09/30/11), FastFix Project; **Developer and architect for scientific software**
 
 <img src="/public/TUMLogo_oZ_Vollfl_schwarz_CMYK.png" style="float:right;padding:10px;height: 3rem"></img>
