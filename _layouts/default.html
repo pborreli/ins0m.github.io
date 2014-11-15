@@ -21,7 +21,17 @@
       </div>
 
       <div class="container content">
-        {{ content }}
+      {% if page.url == "/" %}
+          {% for post in site.posts %}
+            <h2 class="post-title"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+            <span class="post-date">{{ post.date | date_to_string }}</span>
+            {{ post.content | strip_html | truncatewords:75}}<br>
+            <a href="{{ post.url }}">> Read more...</a><br><br>
+          {% endfor %}
+          <br><br>
+        {% else %}
+          {{ content }}
+        {% endif %}
       </div>
     </div>
 
