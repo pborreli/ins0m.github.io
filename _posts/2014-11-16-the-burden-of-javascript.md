@@ -22,25 +22,24 @@ It is hard to imagine that such a radical evolution of the java or c# landscape 
 
 
 ## Badness enforces Pre-Paradigm development
-Now that’s the twist. The reason I like it, is **because** it is so bad. The language has without question many flaws, many problems, addressed by many smart people. Even though I want it to be better I do think there is some value in a bad language. Having a language not act the way you want it to forces you to learn something about the internals. Yes, I’m talking about hoisting, “this”, etc. The complexity JavaScript bombards you with, once you try to develop a decent application can be horrifying. But it forces you into the source, into reading about its internals. 
+Now that’s the twist. The reason I like it, is **because** it is so bad. The language has without question many flaws, many problems, addressed by many smart people. Even though I want it to be better I do think there is some value in a bad language. Having a language not act the way you want it to forces you to learn something about the internals. Yes, I’m talking about hoisting, “this”, etc. The complexity JavaScript bombards you with, once you try to develop a decent application can be horrifying. But it forces you into the source, into reading about its internals. Developing such a habit is enormously helpful for a decent developer, if not even mandatory. And it leads you to carefully think about the language, the ecosystem and the existing paradigms. Especially since the language itself has so many problems.
 
 > Badness takes away the option to rethink. It enforces it.
 
-Developing such a habit is enormously helpful for a decent developer, if not even mandatory. But it also forces a subset of us to, one day, not knowing what we are starting or where it will take us say _"I’m gonna fix that"_. With this, JavaScript has forced it’s community in a unique way to jump into a Pre-Paradigm phase.
-
+It forces a subset of us to, one day, not knowing what we are starting or where it will take us, say _"I’m gonna fix that"_. With this, JavaScript has forced it’s community in a unique way to jump into a Pre-Paradigm phase.
 
 
 ## Pre-Paradigm forces you into reinventing
-The actual reason I like JavaScript’s problems is because, once learned, they do not provide much value. Pointers in c ? Sure, that’s a helpful concept for every language. The misuse of "this"? Not so much. And that is precisely why developers like you and me contribute to the ecosystem. The lesson from JavaScript is not what you learn about the language, but the habit to dig deep, to throw away and constantly iterate. 
+I like JavaScript’s problems because, once learned they do **not** provide much value. Pointers in c ? Sure, that’s a helpful concept for every language. The misuse of "this"? Not so much. And that is precisely why developers like you and me contribute to the ecosystem. The lesson from JavaScript is not what you learn about the language, but the habit to dig deep, to throw away and constantly iterate. 
 
-> Without a working paradigm - you have to reinvent and implement
+> Without a good paradigm - you have to reinvent and implement
 
-Not because the language was so simple and allowed it. But because it was so simple and demanded it. And only with this demand, this force in our backs have we started to re-think and re-implement. We see ideas pop up and being implemented that surfaced in academia 40 years ago but were dismissed. And we see a ton of new concepts and ideas appearing that haven’t been seen. 
+You don't reinvent because the language was so simple and allowed it. But because it was so simple and **demanded** it. And only with this demand, this force in our backs, have we started to rethink and reimplement. We see ideas pop up and being implemented that surfaced in academia 40 years ago but were dismissed. And we see a ton of new concepts and ideas appearing that haven’t been seen. 
 
 > "It had to be **bad** and **popular**"
 > - Gary Bernhard
 
-Yep, Mr Bernhard, I agree. It had to. It is a burden. A burden the community has to take.
+Yep, Mr Bernhard, I agree. It had to be popular as well. Without it beeing popular the community would have switched to another technolgie. Rethinking, inventing and iterating can be a burden. But a burden the community has to take.
 
 ##Links
 

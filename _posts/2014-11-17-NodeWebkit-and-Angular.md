@@ -7,14 +7,14 @@ I have to admit: I am stunned. Not that I haven't expected this. Every developer
 
 > NodeWebkit is a game changer for native applications
 
-Don't believe me? Well, than let my try to convince you.
+Don't believe me? Well, than let me try to convince you.
 
 ## Superior UI models
 The web is a vibrant place and the last years have been absolutely wild. Technologies come on a daily bases, decent ones on a monthly. The jungle is full of live and everyone is trying to find his corner in the ecosystem until the next great thing comes up and snatches it away.
 
 > NodeWebkit is one of those technologies that doesn't snatch away a corner - it opens up a new one
 
-Developing with nodeWebkit means to have you fronted based on the DOM, use your favorite javascript libraries / frameworks and show it in a native frame. The clue though is that you can run your node-source code just side by side. Written down in the same source file it allows you to mix the typical "client side / server side" code. It does not require you to host the files via express, just open them up locally (expect to need the ```node-remote:"somesource"``` flag).
+Developing with NodeWebkit means to have your fronted based on the DOM, use your favorite javascript libraries / frameworks and show it in a native frame. The clue though is that you can run your node-source code just side by side. Written down in the same source file it allows you to mix the typical "client side / server side" code. It does not require you to host the files via express, just open them up locally (expect to need the ```node-remote:"somesource"``` flag).
 
 > Without jugging the application structure that will grow from this, the possibility to run native node code and DOM UI code is what I will, with certainty call an "enabler" of innovation. 
 
